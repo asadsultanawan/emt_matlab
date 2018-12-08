@@ -6,7 +6,7 @@ close all
 clc
 
 k = 8.987E9; % Coulomb's constant
-Q = 20e-6;%An arbitrary charge of 6uc
+Q = 20e-6;%An arbitrary charge of 20uc
 [X,Y] = meshgrid(-10:10); % Create a grid of coordinates where V is to be calculated
 
 V = k*Q./sqrt(X.^2+Y.^2);%Formula of Potential
