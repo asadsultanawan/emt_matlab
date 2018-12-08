@@ -1,0 +1,21 @@
+In[7]:=
+plot[V_] := 
+
+ Module[{Efield = -{D[V, x], D[V, y]}, plot1, plot2}, 
+
+  plot1 = ContourPlot[V, {x, -2, 2}, {y, -2, 2}, 
+
+    ContourShading -> False, DisplayFunction -> Identity];
+
+  plot2 = 
+
+   StreamPlot[Efield, {x, -2, 2}, {y, -2, 2}, VectorScale -> Small, 
+
+    DisplayFunction -> Identity];
+
+  Show[plot1, plot2, DisplayFunction -> $DisplayFunction]]
+
+V = 1/Sqrt[x^2 + (y - 0.5)^2] - 1/Sqrt[x^2 + (y + 0.5)^2];
+
+plot[V]
+Out[11]= 
