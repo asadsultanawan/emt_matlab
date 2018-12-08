@@ -40,7 +40,7 @@ close all
    [c,h] = contour(X,Y,P, cont, 'r');
    clabel(c,h);
    
-  legend('Upper Lobe','Lower Lobe','Location','best')
+  legend('Lower Lobe','Upper Lobe','Location','best')
   title('Plot of Equipotential & Electric Field of a Dipole')
   
   %end
