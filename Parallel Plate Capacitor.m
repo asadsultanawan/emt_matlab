@@ -2,7 +2,6 @@
 %Start
 clc
 close all
-clear all
 % Setting up Parameters:
 a = 1;  %Unit Radius of circular plate
 d = 1;  % Unit Distance between plates.
@@ -26,7 +25,7 @@ hold on
 
 % Compute and plot the electric field:
 [Ex, Ey] = gradient(Q, 0.1);%Electric Field is negative gradient of potential 
-quiver(X, Y, Ex, Ey)% For displaying small arrows
+quiver(X, Y, -Ex, -Ey)% For displaying small arrows
 
 % Drawing  the parallel plate capacitor:
 line('XData', [-a a],'YData', [d/2, d/2], 'Color', 'b', 'LineWidth', 3)
